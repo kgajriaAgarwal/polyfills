@@ -1,12 +1,13 @@
-##Curry functions in js
+## Curry functions in js
 
 - currying - is an advanced techniques of working with functions not only used in js but also in other programming languages.
 - def - currying is transformation of functions from callable as f(a,b,c) into callable as f(a)(b)(c)
 - currying doesn't calls a function, it trsnaforms it.
 
-basically f(a,b,c) --> f(a)-> g(b) -> h(c) 
+###### basically f(a,b,c) --> f(a)-> g(b) -> h(c) 
 
 example - 
+
 function curry(f){
 	return function(a){
   	return function(b){
@@ -20,6 +21,7 @@ function sum(a,b){
 }
 
 const curriedFunction = curry(sum);
+
 console.log("curriedFunction result is:", curriedFunction(2)(3));
 
 ## Implement curry function
@@ -38,7 +40,7 @@ console.log("curriedFunction result is:", curriedFunction(2)(3));
   }
 } */
 
-- //implement curry function
+##### implement curry function
 
 function curry(func){
 	return function curried(...args){
@@ -62,7 +64,7 @@ function sum(a,b){
 const curriedFunction = curry(sum);
 console.log("curriedFunction result is:", curriedFunction(2)(3));
 
-//Implement infinite currying
+##### Implement infinite currying
 
 function sum(a) {
   return function(b){
