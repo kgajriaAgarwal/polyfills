@@ -8,6 +8,7 @@
 
 example - 
 
+```javascript
 function curry(f){
 	return function(a){
   	return function(b){
@@ -21,8 +22,8 @@ function sum(a,b){
 }
 
 const curriedFunction = curry(sum);
-
 console.log("curriedFunction result is:", curriedFunction(2)(3));
+```
 
 ## Implement curry function
 
@@ -42,6 +43,7 @@ console.log("curriedFunction result is:", curriedFunction(2)(3));
 
 ##### implement curry function
 
+```javascript
 function curry(func){
 	return function curried(...args){
   //If enough args , then calls the function
@@ -63,9 +65,11 @@ function sum(a,b){
 
 const curriedFunction = curry(sum);
 console.log("curriedFunction result is:", curriedFunction(2)(3));
+```
 
 ##### Implement infinite currying
 
+```javascript
 function sum(a) {
   return function(b){
     if(!b){
@@ -75,3 +79,4 @@ function sum(a) {
   }
 }
 console.log(sum(1)(2)(3)(4)(5)(6)());  //21
+```
