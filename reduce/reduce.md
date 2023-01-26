@@ -4,15 +4,16 @@
 
 - The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
 ____________________________________________________________________________
-//REDUCE EXAMPLES...
-//reduce for aggregation
+## REDUCE EXAMPLES...
+ - reduce for aggregation
 //arr.reduce(reducer, initialValue)
 
-//reduce method take 4 args
-//arr.reduce(acc, cval, cindx , arr)
+- reduce method take 4 args
+#### arr.reduce(acc, cval, cindx , arr)
 
 #### //EXAMPLE 1
-//example of aggregation 
+//example of aggregation
+
 ```
 const arr = [1,2,3];
 const res = arr.reduce((acc, cval)=> {
@@ -23,7 +24,8 @@ console.log(res);
 ```
 ___________________________________________________________________________
 
-//EXAMPLE 2
+#### EXAMPLE 2
+```
 //Summing an Array of Numeric Properties
 const lineItems = [
   { description: 'Eggs (Dozen)', quantity: 1, price: 3, total: 3 },
@@ -34,10 +36,11 @@ const lineItems = [
 //find the total
 const total = lineItems.reduce((acc, cval) => { return acc += cval.total}, 0)
 console.log("total is :", total);
-
+```
 ____________________________________________________________________________
 
-//EXAMPLE 3
+#### EXAMPLE 3
+```
 //Find the Maximum Value
 const dates = [
   '2019/06/01',
@@ -48,9 +51,11 @@ const dates = [
 
 const maxDate = dates.reduce((acc, cval)=> acc > cval? acc : cval);
 console.log("maxDate:", maxDate);
+```
 ___________________________________________________________________________________________
 
-//EXAMPLE 4
+#### EXAMPLE 4
+```
 //Grouping Values
 const characters = [
   { name: 'Jean-Luc Picard', age: 59 },
@@ -69,17 +74,21 @@ const groupCharacters = characters.reduce((acc, cval)=>{
 }, {});
 
 console.log("groupCharacters:", groupCharacters);
-______________________________________________________________________________________________
+```
+___________________________________________________________________________________________
 
-//EXAMPLE 5
+#### EXAMPLE 5
+```
 //Summing Values in an Object Array Using Array Reduce JavaScript
 const obj = [{n: 5}, {n: 9}, {n: 13}, {n: 25}, {n: 40}]
 
 const resultObjSum = obj.reduce((acc, cval)=> { return acc += cval.n}, 0);
 console.log("resultObjSum:", resultObjSum);
+```
 _________________________________________________________________________________________________
 
-//EXAMPLE 6
+#### EXAMPLE 6
+```
 //Flattening an Array of Arrays With Reduce Method
 let mulArray = [[3, 5], [1, 7], [12, 9], 14];
 
@@ -88,9 +97,11 @@ const flatMulArr = mulArray.reduce((acc, cval) => {
 }, [] );
 
 console.log("flatMulArr:", flatMulArr);
+```
 ___________________________________________________________________________________________________
 
-//EXAMPLE 7
+#### EXAMPLE 7
+```
 //Counting Instances in an Object Using Array Reduce in JavaScript
 const myCars = ['Mercedes-Benz', 'Jeep', 'Ferrari', 'Lamborghini', 'Mercedes-Benz', 'BMW', 'Ferrari'];
 
@@ -104,9 +115,11 @@ const countInstances = myCars.reduce((acc, cval) =>{
 }, {})
 
 console.log("countInstances:", countInstances);
+```
 ___________________________________________________________________________________________________
 
-//EXAMPLE 9
+#### EXAMPLE 8
+```
 //Grouping Objects With Array Reduce in JavaScript
 
 let student = [
@@ -145,9 +158,11 @@ output expected:
   name: "Rahul"
   }]
 }
+```
 ___________________________________________________________________________________________________
 
-//EXAMPLE 10
+#### EXAMPLE 9
+```
 //Removing Duplicates With Array Reduce
 let array = [2, 5, 7, 5, 12, 9, 7, 5, 4, 3, 5, 2, 4, 15];
 
@@ -161,9 +176,11 @@ const uniqueArr = array.reduce((acc, cval)=>{
 console.log("uniqueArr:", uniqueArr);
 
 //O/p : "uniqueArr:", [2, 5, 7, 12, 9, 4, 3, 15]
+```
 ___________________________________________________________________________________________________
 
-//EXAMPLE 11
+#### EXAMPLE 10
+```
 //find average
 const euros = [29.76, 41.85, 46.5];
 
@@ -174,9 +191,11 @@ const findAverage = euros.reduce((acc, cval)=>  {
 }, 0)
 
 console.log("findAverage:", findAverage.toFixed(2))
+```
 ___________________________________________________________________________________________________
 
-//EXAMPLE 12
+#### EXAMPLE 11
+```
 //Creating a Tally with the Reduce Method In JavaScript​
 
 const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig' ];
@@ -200,10 +219,11 @@ console.log("createTally:", createTally);
   fig: 1,
   orange: 3
 }
+```
 ___________________________________________________________________________________________________
 
-//EXAMPLE 13
-
+#### EXAMPLE 12
+```
 /* More often than not, information is nested in more complicated ways. For instance, lets say we just want all the colors in the data variable below. */
 
 const data = [
@@ -221,11 +241,11 @@ VM105:12 dataArr: (3) [Array(2), Array(4), Array(2)]0: (2) ['blue', 'green']1:
 const res = dataArr.reduce((acc, cval) => acc.concat(cval), [])
 console.log("res:", res);
 VM760:2 res: (8) ['blue', 'green', 'green', 'black', 'orange', 'blue', 'green', 'red']
-
+```
 ___________________________________________________________________________________________________
 
-//EXAMPLE 14
-
+#### EXAMPLE 13
+```
 /* Piping with Reduce
 An interesting aspect of the reduce method in JavaScript is that you can reduce over functions as well as numbers and strings. */
 
@@ -278,10 +298,11 @@ console.log("result:", result) // 3
   halve
   
 ]; */
-
+```
 _____________________________________________________________________________________________________________________________________________________
 
-//EXAMPLE 15
+#### EXAMPLE 14
+```
 //segregation using reduce method
 const arr1 =  [1.1, 1.2, 1.3, 2.2, 2.3, 2.4, 4.5, 4.6, 7.2, 7.7];
 //expected o/p : 
@@ -306,17 +327,18 @@ const segregate = arr1.reduce((acc, cval)=> {
 }, {})
 
 console.log(segregate);
+```
 
 _____________________________________________________________________________________________________________________________________________________________
 
-//POLYFILL FOR REDUCE
+## POLYFILL FOR REDUCE
 /**
  * Read FAQs section on the left for more information on how to use the editor
 **/
 /**
 * Do not change the function name
 **/
-
+```
 Array.prototype.customReduce  = function customReduce(callback, initialValue) {
   // DO NOT REMOVE
   'use strict'; 
@@ -371,3 +393,4 @@ function sum(acc , cval){
 
 var result = arr.customReduce(sum);
 console.log("result is :", result);
+```
