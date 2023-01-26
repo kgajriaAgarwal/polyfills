@@ -11,8 +11,8 @@ ____________________________________________________________________________
 - reduce method take 4 args
 #### arr.reduce(acc, cval, cindx , arr)
 
-#### //EXAMPLE 1
-//example of aggregation
+#### EXAMPLE 1
+##### example of aggregation
 
 ```
 const arr = [1,2,3];
