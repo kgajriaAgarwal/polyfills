@@ -29,9 +29,9 @@ console.log("curriedFunction result is:", curriedFunction(2)(3));
 
 #### requiremnets of curry function
 1. curry() should return a function
-2. The returned function should
- 2.1. If number of arguments matches the original function , return the final resul
- 2.2. Otherwise return a function which expects the missing arguments, as this function needs to be curried as well. 
+2. The returned function should.
+    2.1. If number of arguments matches the original function , return the final resul
+    2.2. Otherwise return a function which expects the missing arguments, as this function needs to be curried as well. 
 
 /* function curry(f){
   return function(a){
